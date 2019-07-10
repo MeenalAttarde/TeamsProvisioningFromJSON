@@ -16,14 +16,6 @@
           "description": "Storage Account type"
         }
       },
-      "storageNamePrefix": {
-        "type": "string",
-        "defaultValue": "oprov",
-        "maxLength": 11,
-        "metadata": {
-          "description":"Begin storage account name with this value"
-        }
-      },
       "location": {
         "type": "string",
         "defaultValue": "[resourceGroup().location]",
@@ -69,7 +61,7 @@
       "functionAppName": "[parameters('appName')]",
       "hostingPlanName": "[parameters('appName')]",
       "applicationInsightsName": "[parameters('appName')]",
-      "storageAccountName": "[concat(parameters('storageNamePrefix'),uniquestring(resourceGroup().id))]",
+      "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'azfunctions')]",
       "storageAccountid": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
       "functionWorkerRuntime": "[parameters('runtime')]",
       "createRequestQueueName": "[concat('https://', variables('storageAccountName'),'.queue.core.windows.net/create-team-request-queue')]",

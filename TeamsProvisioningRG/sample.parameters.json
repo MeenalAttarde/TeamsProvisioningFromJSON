@@ -6,13 +6,10 @@
         "value": "(your app name)"
       },
       "repoUrl": {
-        "value": "(your github repo URL like https://github.com/PnP/OrchestratedProvisioning.git)"
+        "value": "(your github repo URL like https://github.com/BobGerman/TeamsProvisioning.git)"
       },
       "branch": {
         "value": "(your github branch like master"
-      },
-      "storageNamePrefix": {
-        "value": "(prefix for storage account name, max of 11 lower case letters like oprovprod)"
       },
       "TENANT": {
         "value": "(your tenant ID)"
